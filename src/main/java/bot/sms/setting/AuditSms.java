@@ -42,6 +42,11 @@ public class AuditSms {
                 processSms.sendSms();
                 setCommandText(CommandSendSms.text);
                 break;
+            case "/overwritedata":
+                processSms.setSms(new CommandOverWriteData());
+                processSms.sendSms();
+                setCommandText(CommandOverWriteData.text);
+                break;
             default:
                 CommandSendSms.list.add(getTextSms());
         }
